@@ -1,0 +1,27 @@
+project:
+  name: "example-slides-deck"
+  domain: "teaching"
+
+paper:
+  type: "paper"
+  format: "unknown"
+  main: "paper/"
+  bibliography: "paper/"
+
+analysis:
+  root: "analysis/"
+  entrypoints: []
+  dependency_files: []
+  outputs:
+    tables: []
+    figures: []
+
+slides:
+  main: "slides/lecture-01.qmd"
+  format: "quarto"
+  theme: "caltech-revealjs"
+
+commands:
+  paper_build: "echo 'no paper configured'"
+  analysis_check: "echo 'no analysis configured'"
+  slides_render: "quarto render slides/lecture-01.qmd"

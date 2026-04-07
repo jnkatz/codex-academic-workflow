@@ -1,0 +1,9 @@
+---
+title: "Example Lecture"
+author: "Author Name"
+format: caltech-revealjs
+---
+
+# Opening Slide
+
+This is a minimal slide deck used to demonstrate the Codex academic workflow scaffold.

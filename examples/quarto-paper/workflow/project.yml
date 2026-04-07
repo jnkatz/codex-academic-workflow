@@ -1,0 +1,29 @@
+project:
+  name: "example-quarto-paper"
+  domain: "political-science"
+
+paper:
+  type: "paper"
+  format: "quarto"
+  main: "paper/paper.qmd"
+  bibliography: "paper/references.bib"
+
+analysis:
+  root: "analysis/"
+  entrypoints:
+    - "analysis/run.R"
+  dependency_files:
+    - "analysis/README.md"
+  outputs:
+    tables: []
+    figures: []
+
+slides:
+  main: "slides/"
+  format: "unknown"
+  theme: "caltech-revealjs"
+
+commands:
+  paper_build: "quarto render paper/paper.qmd"
+  analysis_check: "Rscript analysis/run.R"
+  slides_render: "echo 'no slide deck configured'"

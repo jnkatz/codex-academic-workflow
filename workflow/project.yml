@@ -1,0 +1,29 @@
+project:
+  name: "replace-with-project-name"
+  domain: "social-science"
+
+paper:
+  type: "paper"  # paper | pap | grant
+  format: "unknown"  # latex | quarto | unknown
+  main: "paper/replace-me"
+  bibliography: "paper/replace-me.bib"
+
+analysis:
+  root: "analysis/"
+  entrypoints:
+    - "analysis/replace-me"
+  dependency_files:
+    - "replace-with-renv-or-requirements-file"
+  outputs:
+    tables: []
+    figures: []
+
+slides:
+  main: "slides/replace-me"
+  format: "unknown"  # quarto | beamer | unknown
+  theme: "caltech-revealjs"
+
+commands:
+  paper_build: "replace-with-paper-build-command"
+  analysis_check: "replace-with-analysis-check-command"
+  slides_render: "replace-with-slide-render-command"

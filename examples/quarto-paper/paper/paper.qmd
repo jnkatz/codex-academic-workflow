@@ -1,0 +1,13 @@
+---
+title: "Example Quarto Paper"
+bibliography: references.bib
+format: html
+---
+
+# Abstract
+
+This is a minimal Quarto manuscript used to demonstrate the Codex academic workflow scaffold.
+
+# Introduction
+
+This example provides a placeholder manuscript for workflow testing.

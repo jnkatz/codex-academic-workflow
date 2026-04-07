@@ -1,0 +1,31 @@
+project:
+  name: "example-latex-paper"
+  domain: "economics"
+
+paper:
+  type: "paper"
+  format: "latex"
+  main: "paper/main.tex"
+  bibliography: "paper/references.bib"
+
+analysis:
+  root: "analysis/"
+  entrypoints:
+    - "analysis/run.R"
+  dependency_files:
+    - "analysis/renv.lock"
+  outputs:
+    tables:
+      - "paper/tables"
+    figures:
+      - "paper/figures"
+
+slides:
+  main: "slides/"
+  format: "unknown"
+  theme: "caltech-revealjs"
+
+commands:
+  paper_build: "latexmk -pdf paper/main.tex"
+  analysis_check: "Rscript analysis/run.R"
+  slides_render: "echo 'no slide deck configured'"
