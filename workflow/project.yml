@@ -5,8 +5,8 @@ project:
 paper:
   type: "paper"  # paper | pap | grant
   format: "unknown"  # latex | quarto | unknown
-  main: "paper/replace-me"
-  bibliography: "paper/replace-me.bib"
+  main: "paper/"
+  bibliography: "paper/"
 
 analysis:
   root: "analysis/"
@@ -19,7 +19,7 @@ analysis:
     figures: []
 
 slides:
-  main: "slides/replace-me"
+  main: "slides/"
   format: "unknown"  # quarto | beamer | unknown
   theme: "caltech-revealjs"
 
