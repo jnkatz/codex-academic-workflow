@@ -20,6 +20,7 @@ Start here:
 
 - [docs/getting-started.md](docs/getting-started.md)
 - [docs/manifest-reference.md](docs/manifest-reference.md)
+- [docs/how-to-adapt-an-existing-repo.md](docs/how-to-adapt-an-existing-repo.md)
 
 ## Design
 

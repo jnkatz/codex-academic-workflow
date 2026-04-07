@@ -39,6 +39,8 @@ Steps:
 3. Preserve the repo's existing structure; do not move files just to fit the scaffold.
 4. Run `academic-bootstrap validate`.
 
+For a worked example, see [how-to-adapt-an-existing-repo.md](how-to-adapt-an-existing-repo.md).
+
 ## Install The Shared Skills
 
 Typical starting set:
