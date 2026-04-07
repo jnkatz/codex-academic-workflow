@@ -1,0 +1,6 @@
+# One shell pattern per line.
+# The check script blocks changes to paths that match these patterns.
+# Keep this list short and intentional.
+
+.git/*
+workflow/handoff.md

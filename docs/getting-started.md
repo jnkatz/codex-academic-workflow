@@ -31,9 +31,13 @@ Steps:
 
 1. Copy only:
    - `AGENTS.md`
+   - `scripts/check-protected-paths.sh`
+   - `scripts/run-verifications.sh`
    - `workflow/project.yml`
    - `workflow/decision-log.md`
    - `workflow/substance-review.md`
+   - `workflow/protected-paths.txt`
+   - `workflow/handoff.md`
    - `workflow/reports/`
 2. Point `workflow/project.yml` at the repo's actual manuscript, code, and slide paths.
 3. Preserve the repo's existing structure; do not move files just to fit the scaffold.
@@ -94,6 +98,22 @@ This is where project-specific “agent logic” lives in explicit written form.
 Use this for durable decisions and repeated corrections.
 If Codex keeps making the same wrong assumption, record the correction here.
 
+### `workflow/protected-paths.txt`
+
+Use this for a short list of paths that should be treated as high-risk.
+The scaffold includes `scripts/check-protected-paths.sh` as an explicit safeguard.
+
+Typical candidates:
+
+- bibliography files
+- fragile shared helpers
+- hand-maintained reference materials
+
+### `workflow/handoff.md`
+
+Use this for the current short session handoff.
+This is the Codex-friendly equivalent of hook-based state restoration: explicit, local, and readable.
+
 ## Common Commands
 
 After setup, the normal workflow is:
@@ -102,6 +122,8 @@ After setup, the normal workflow is:
 2. `paper-workflow draft` or `paper-workflow submission`
 3. `paper-workflow code`
 4. `deck-review`
+5. `bash scripts/run-verifications.sh`
+6. `bash scripts/check-protected-paths.sh`
 
 Use the narrowest command that matches the current task.
 

@@ -9,9 +9,13 @@ The example here is based on `ids126`, a slide-first teaching repo that already 
 Add the workflow layer:
 
 - `AGENTS.md`
+- `scripts/check-protected-paths.sh`
+- `scripts/run-verifications.sh`
 - `workflow/project.yml`
 - `workflow/decision-log.md`
 - `workflow/substance-review.md`
+- `workflow/protected-paths.txt`
+- `workflow/handoff.md`
 - `workflow/reports/`
 
 Do not move existing files just to fit the scaffold.
@@ -82,6 +86,8 @@ Use:
 
 - `workflow/decision-log.md` for durable decisions
 - `workflow/substance-review.md` for local review priorities
+- `workflow/protected-paths.txt` for intentionally high-risk files
+- `workflow/handoff.md` for the current short session handoff
 - `workflow/reports/` for saved workflow output
 
 For `ids126`, the substantive review file focused on:
@@ -90,6 +96,9 @@ For `ids126`, the substantive review file focused on:
 - notation consistency across weeks
 - careful use of causal language
 - alignment between figures, code, and lecture narrative
+
+The protected-paths file should stay short.
+For a repo like `ids126`, good candidates would be fragile shared helpers or hand-maintained reference files, not every slide deck in the repo.
 
 ## Step 5: Validate Before Doing More
 

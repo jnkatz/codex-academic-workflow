@@ -86,6 +86,8 @@ check_path workflow dir
 check_path workflow/project.yml file
 check_path workflow/decision-log.md file
 check_path workflow/substance-review.md file
+check_path workflow/protected-paths.txt file
+check_path workflow/handoff.md file
 check_path workflow/reports dir
 
 paper_main="$(manifest_value paper main)"

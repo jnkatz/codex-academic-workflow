@@ -1,0 +1,2 @@
+# Example protected paths for a slide project
+workflow/handoff.md

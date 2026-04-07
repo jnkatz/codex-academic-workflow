@@ -1,0 +1,3 @@
+# Example protected paths for a Quarto paper project
+paper/references.bib
+workflow/handoff.md

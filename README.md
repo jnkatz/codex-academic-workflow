@@ -35,6 +35,8 @@ The minimal project-local workflow state lives under `workflow/`:
 - `workflow/project.yml`
 - `workflow/decision-log.md`
 - `workflow/substance-review.md`
+- `workflow/protected-paths.txt`
+- `workflow/handoff.md`
 - `workflow/reports/`
 
 The local `AGENTS.md` file tells Codex how this specific project works.
@@ -127,6 +129,11 @@ bash scripts/smoke-test.sh
 
 `validate-scaffold.sh` checks that the local scaffold files and directories exist and flags obvious manifest gaps.
 `smoke-test.sh` validates the root scaffold plus all bundled examples and performs lightweight renders when local tools are available.
+
+Additional helper scripts:
+
+- `scripts/check-protected-paths.sh`
+- `scripts/run-verifications.sh`
 
 ## Examples
 
