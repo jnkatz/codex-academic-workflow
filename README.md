@@ -51,6 +51,42 @@ The local `AGENTS.md` file tells Codex how this specific project works.
    - `deck-review` for slide review
    - `review-paper-code` for reproducibility and paper-code alignment
 
+## Installing Shared Skills
+
+Install the shared skills from `codex-skills` rather than copying them into this repository.
+
+Typical install targets:
+
+- `skills/academic-bootstrap`
+- `skills/paper-workflow`
+- `skills/deck-review`
+- `skills/review-paper-light`
+- `skills/review-paper`
+- `skills/review-paper-code`
+- `skills/proofread`
+- `skills/write-well`
+- `skills/apsa-style`
+- `skills/assess-outline`
+
+For projects with preregistrations or grants, also install:
+
+- `skills/review-pap`
+- `skills/review-grant`
+
+## Applying The Scaffold To An Existing Repo
+
+For an existing project:
+
+1. Copy in the thin scaffold files rather than restructuring the whole repo.
+2. Point `workflow/project.yml` at the repo's real manuscript, analysis, and slide paths.
+3. Record project-specific instructions in `AGENTS.md`.
+4. Run `academic-bootstrap validate`.
+5. Start with the narrowest relevant workflow:
+   - `paper-workflow draft`
+   - `paper-workflow submission`
+   - `paper-workflow code`
+   - `deck-review`
+
 ## Suggested Skill Set
 
 For most projects:
@@ -74,9 +110,11 @@ Run:
 
 ```bash
 bash scripts/validate-scaffold.sh
+bash scripts/smoke-test.sh
 ```
 
-This checks that the local scaffold files and directories exist and flags obvious manifest gaps.
+`validate-scaffold.sh` checks that the local scaffold files and directories exist and flags obvious manifest gaps.
+`smoke-test.sh` validates the root scaffold plus all bundled examples and performs lightweight renders when local tools are available.
 
 ## Examples
 
@@ -85,6 +123,9 @@ The `examples/` directory includes:
 - `latex-paper/` for a LaTeX manuscript track
 - `quarto-paper/` for a Quarto manuscript track
 - `slides-deck/` for a Quarto slide deck using `caltech-revealjs`
+
+The examples are intentionally small.
+They are there to exercise the manifest shape and workflow expectations, not to serve as polished academic templates.
 
 ## Scope
 
