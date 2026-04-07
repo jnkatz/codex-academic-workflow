@@ -14,6 +14,13 @@ The goal is to keep project-local facts local:
 
 Reusable review logic belongs in `codex-skills`.
 
+## Documentation
+
+Start here:
+
+- [docs/getting-started.md](docs/getting-started.md)
+- [docs/manifest-reference.md](docs/manifest-reference.md)
+
 ## Design
 
 This scaffold treats three artifact tracks as first-class siblings:
@@ -51,6 +58,8 @@ The local `AGENTS.md` file tells Codex how this specific project works.
    - `deck-review` for slide review
    - `review-paper-code` for reproducibility and paper-code alignment
 
+For a fuller walkthrough, see [docs/getting-started.md](docs/getting-started.md).
+
 ## Installing Shared Skills
 
 Install the shared skills from `codex-skills` rather than copying them into this repository.
@@ -86,6 +95,8 @@ For an existing project:
    - `paper-workflow submission`
    - `paper-workflow code`
    - `deck-review`
+
+The manifest fields used by those commands are documented in [docs/manifest-reference.md](docs/manifest-reference.md).
 
 ## Suggested Skill Set
 

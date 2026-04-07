@@ -1,0 +1,117 @@
+# Getting Started
+
+This guide explains how to use the split Codex academic workflow in practice.
+
+The workflow has three parts:
+
+- `codex-skills`: reusable shared skills
+- `codex-academic-workflow`: the thin local scaffold
+- `caltech-revealjs`: the slide theme dependency for Quarto decks when you want the Caltech slide track
+
+## Choose Your Starting Point
+
+### New project
+
+Use the scaffold repo directly when you are starting a new academic project and want a standard local structure.
+
+Steps:
+
+1. Create a new repo from this scaffold or copy its top-level files into a new repo.
+2. Fill in `AGENTS.md`.
+3. Fill in `workflow/project.yml`.
+4. Fill in `workflow/substance-review.md`.
+5. Install the shared skills you need from `codex-skills`.
+6. Run `academic-bootstrap validate`.
+
+### Existing project
+
+Use the scaffold selectively when a repo already has a real structure you do not want to disturb.
+
+Steps:
+
+1. Copy only:
+   - `AGENTS.md`
+   - `workflow/project.yml`
+   - `workflow/decision-log.md`
+   - `workflow/substance-review.md`
+   - `workflow/reports/`
+2. Point `workflow/project.yml` at the repo's actual manuscript, code, and slide paths.
+3. Preserve the repo's existing structure; do not move files just to fit the scaffold.
+4. Run `academic-bootstrap validate`.
+
+## Install The Shared Skills
+
+Typical starting set:
+
+- `academic-bootstrap`
+- `paper-workflow`
+- `deck-review`
+- `review-paper-light`
+- `review-paper`
+- `review-paper-code`
+- `proofread`
+- `write-well`
+- `apsa-style`
+- `assess-outline`
+
+Add these when relevant:
+
+- `review-pap`
+- `review-grant`
+
+## Fill In The Local Files
+
+### `AGENTS.md`
+
+Use this for project-local facts:
+
+- what the repo is for
+- which artifact track is primary
+- real build/render commands
+- notation and writing conventions
+- repo-specific warnings
+
+### `workflow/project.yml`
+
+Use this as the machine-readable pointer file for the workflow.
+Point it at the real paths, not idealized ones.
+
+Examples:
+
+- a LaTeX paper project can set `paper.main: paper/main.tex`
+- a Quarto paper project can set `paper.main: paper/paper.qmd`
+- a slide-first teaching repo can set `paper.main: not-in-use`
+
+### `workflow/substance-review.md`
+
+Use this for the domain-specific review rubric that should stay local to the project.
+This is where project-specific “agent logic” lives in explicit written form.
+
+### `workflow/decision-log.md`
+
+Use this for durable decisions and repeated corrections.
+If Codex keeps making the same wrong assumption, record the correction here.
+
+## Common Commands
+
+After setup, the normal workflow is:
+
+1. `academic-bootstrap validate`
+2. `paper-workflow draft` or `paper-workflow submission`
+3. `paper-workflow code`
+4. `deck-review`
+
+Use the narrowest command that matches the current task.
+
+## Recommended Patterns
+
+- Keep shared logic in skills, not in copied project scripts.
+- Keep project-local facts in `AGENTS.md` and `workflow/`.
+- Use explicit saved reports rather than hidden automation.
+- Do not force every repo into literal `paper/`, `analysis/`, and `slides/` directories when existing paths already work.
+
+## What This Workflow Does Not Do
+
+- It does not vendor the shared skills into every project.
+- It does not recreate Claude-specific hooks or hidden agents.
+- It does not replace project judgment with automation.
