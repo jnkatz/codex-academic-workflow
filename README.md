@@ -66,6 +66,7 @@ For a fuller walkthrough, see [docs/getting-started.md](docs/getting-started.md)
 ## Installing Shared Skills
 
 Install the shared skills from `codex-skills` rather than copying them into this repository.
+Use `$skill-installer` as the preferred global installation path into `~/.codex/skills`.
 
 Typical install targets:
 

@@ -65,6 +65,11 @@ Add these when relevant:
 - `review-pap`
 - `review-grant`
 
+Preferred install method:
+
+- use `$skill-installer` against the GitHub paths in `jnkatz/codex-skills`
+- install into the normal global skill directory rather than copying local repo directories by hand
+
 ## Fill In The Local Files
 
 ### `AGENTS.md`
