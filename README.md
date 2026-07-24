@@ -36,14 +36,13 @@ The minimal project-local workflow state lives under `workflow/`:
 - `workflow/decision-log.md`
 - `workflow/substance-review.md`
 - `workflow/protected-paths.txt`
-- `workflow/handoff.md`
 - `workflow/reports/`
 
 The local `AGENTS.md` file tells Codex how this specific project works.
 
 ## How This Fits Together
 
-- `codex-skills` supplies reusable shared skills such as `academic-bootstrap`, `paper-workflow`, `deck-review`, `review-paper`, `review-paper-code`, `proofread`, and `write-well`.
+- `codex-skills` supplies reusable shared skills such as `academic-bootstrap`, `paper-workflow`, `deck-review`, `review-paper-code`, `prose-check`, `apsa-style`, and `assess-outline`.
 - this scaffold supplies the thin local files those skills rely on
 - `caltech-revealjs` remains the canonical slide theme for Quarto decks when the project wants the Caltech slide track
 
@@ -66,18 +65,16 @@ For a fuller walkthrough, see [docs/getting-started.md](docs/getting-started.md)
 ## Installing Shared Skills
 
 Install the shared skills from `codex-skills` rather than copying them into this repository.
-Use `$skill-installer` as the preferred global installation path into `~/.codex/skills`.
+For Jonathan's machines, develop and version skills in `codex-skills`, promote them into the chezmoi mirror with `vendor-skill.sh`, and apply that mirror to `~/.codex/skills`.
 
 Typical install targets:
 
 - `skills/academic-bootstrap`
 - `skills/paper-workflow`
 - `skills/deck-review`
-- `skills/review-paper-light`
-- `skills/review-paper`
 - `skills/review-paper-code`
-- `skills/proofread`
-- `skills/write-well`
+- `skills/prose-check`
+- `skills/prose-revision`
 - `skills/apsa-style`
 - `skills/assess-outline`
 
@@ -109,11 +106,9 @@ For most projects:
 - `academic-bootstrap`
 - `paper-workflow`
 - `deck-review`
-- `review-paper-light`
-- `review-paper`
 - `review-paper-code`
-- `proofread`
-- `write-well`
+- `prose-check`
+- `prose-revision`
 - `apsa-style`
 - `assess-outline`
 

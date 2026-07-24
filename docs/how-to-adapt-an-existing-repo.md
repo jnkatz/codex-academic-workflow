@@ -15,7 +15,6 @@ Add the workflow layer:
 - `workflow/decision-log.md`
 - `workflow/substance-review.md`
 - `workflow/protected-paths.txt`
-- `workflow/handoff.md`
 - `workflow/reports/`
 
 Do not move existing files just to fit the scaffold.
@@ -87,8 +86,9 @@ Use:
 - `workflow/decision-log.md` for durable decisions
 - `workflow/substance-review.md` for local review priorities
 - `workflow/protected-paths.txt` for intentionally high-risk files
-- `workflow/handoff.md` for the current short session handoff
 - `workflow/reports/` for saved workflow output
+
+If unfinished work genuinely needs a resumable handoff, use the shared `baton` skill and its ignored `.baton/` directory. Do not add a durable "latest handoff" file to the scaffold.
 
 For `ids126`, the substantive review file focused on:
 

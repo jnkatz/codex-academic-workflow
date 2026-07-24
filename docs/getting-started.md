@@ -37,7 +37,6 @@ Steps:
    - `workflow/decision-log.md`
    - `workflow/substance-review.md`
    - `workflow/protected-paths.txt`
-   - `workflow/handoff.md`
    - `workflow/reports/`
 2. Point `workflow/project.yml` at the repo's actual manuscript, code, and slide paths.
 3. Preserve the repo's existing structure; do not move files just to fit the scaffold.
@@ -52,11 +51,9 @@ Typical starting set:
 - `academic-bootstrap`
 - `paper-workflow`
 - `deck-review`
-- `review-paper-light`
-- `review-paper`
 - `review-paper-code`
-- `proofread`
-- `write-well`
+- `prose-check`
+- `prose-revision`
 - `apsa-style`
 - `assess-outline`
 
@@ -67,8 +64,9 @@ Add these when relevant:
 
 Preferred install method:
 
-- use `$skill-installer` against the GitHub paths in `jnkatz/codex-skills`
-- install into the normal global skill directory rather than copying local repo directories by hand
+- develop and version personal skills in `jnkatz/codex-skills`
+- promote the catalog into the chezmoi mirror with `vendor-skill.sh`
+- apply the mirror to `~/.codex/skills`; do not hand-copy or symlink source directories
 
 ## Fill In The Local Files
 
@@ -114,10 +112,9 @@ Typical candidates:
 - fragile shared helpers
 - hand-maintained reference materials
 
-### `workflow/handoff.md`
+### Unfinished-work handoffs
 
-Use this for the current short session handoff.
-This is the Codex-friendly equivalent of hook-based state restoration: explicit, local, and readable.
+Use the shared `baton` skill when unfinished work genuinely needs a resumable handoff. Batons live under the project's ignored `.baton/` directory and are not part of the durable scaffold. Put lasting decisions in `workflow/decision-log.md`.
 
 ## Common Commands
 

@@ -1,4 +1,5 @@
 .DS_Store
+.baton/
 *.log
 *.aux
 *.out
